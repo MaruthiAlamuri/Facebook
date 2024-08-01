@@ -18,10 +18,31 @@ public class FacebookView {
 	    Scanner sc = new Scanner(System.in);
 	    System.out.println("Enter Your Choice");
 	    
-	    int ch=sc.nextInt();
-	    
+	    int c=sc.nextInt();
 	    FacebookControllerInterface fc = new FacebookController();
-	    Switch
+	    String s="y";
+	    while(s.equals(s)) {
+	    switch (c){
+	    	case 1: fc.createProfileController();
+	    		break;
+	    	case 2:fc.viewProfileController();
+	    		break;
+	    	case 3:fc.deleteProfileController();
+	    		break;
+	        case 4:fc.editProfileController();
+    		    break;
+	        case 5:fc.serachProfileController();
+    		   break;
+	        case 6:fc.viewAllProfileController();
+    		   break;
+	        case 7:fc.loginProfileController();
+    		    break;
+	        default:
+	        	System.out.println("Wrong Choice");
+	    }
+	    System.out.println("You Want another choice");
+	    s=sc.next();
+	  }
 	}
 
 }
